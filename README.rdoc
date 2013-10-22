@@ -19,7 +19,7 @@ ivar_encapsulation can be installed via {RubyGems}[http://rubygems.org/].
 
   $ gem install ivar_encapsulation
 
-I only works on 2.0+ and I generally only test it with the most current Ruby release.
+It only works on 2.0+ and I generally only test it with the most current Ruby release.
 
 == Usage
 
