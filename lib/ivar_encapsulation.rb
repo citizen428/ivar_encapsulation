@@ -5,17 +5,18 @@ class Module
   def attribute(*attributes, getter: false, setter: false)
     attributes.each do |attribute|
       instance_var_name = "@#{attribute}"
+      setter_name = "#{attribute}="
 
       define_method(attribute) do
         instance_variable_get(instance_var_name)
       end
 
-      define_method("#{attribute}=") do |value|
+      define_method(setter_name) do |value|
         instance_variable_set(instance_var_name, value)
       end
 
       self.send(:private, attribute) unless getter
-      self.send(:private, "#{attribute}=") unless setter
+      self.send(:private, setter_name) unless setter
     end
     nil # like attr_accessor
   end
