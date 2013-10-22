@@ -54,7 +54,7 @@ For completeness' sake, you can also define a private getter and a public setter
 
   attribute :foo, setter: true
 
-Last but not least there's the option to have both the getter and the setter as public methods, which is essentially the same as <tt>attr_accessor</tt>, although in a more explicit fashion. If you bother to use this gem at all, you probably want to define all your attributes in the same way:
+Last but not least there's the option to have both the getter and the setter as public methods, which is essentially the same as <tt>attr_accessor</tt>, although in a more explicit fashion. If you bother to use this gem at all, you probably want to define all your attributes in a consistent fashion:
 
   attribute :foo, getter: true, setter: true
 
@@ -63,7 +63,7 @@ This is how your class definitions will look when using this gem:
   class Foo
     attributes :foo, :bar                              # private getters and setters
     attribute :read_only, getter: true                 # public getter, private setter
-    attribute :full_access, getter: true, setter: true # publoc getter and setter
+    attribute :full_access, getter: true, setter: true # public getter and setter
 
     def initialize(foo)
       self.foo = foo
