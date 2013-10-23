@@ -74,6 +74,10 @@ This is how your class definitions will look when using this gem:
 
   end
 
+== Todo/Ideas
+
+* Being able to supply getters and setters as procs?
+
 == Authors
 
 This project was created by Michael Kohl. He can be reached via email at citizen428 at gmail.com.
